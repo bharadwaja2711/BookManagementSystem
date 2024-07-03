@@ -10,7 +10,6 @@
 <style>
     body {
         padding-top: 160px; /* Increase padding to match larger navbar, slogan, and search bar */
-        background-image: url('/images/home.png');
         background-size: cover; /* Cover the entire page */
         background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
@@ -184,37 +183,11 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/register"><i class="fas fa-user"></i> Login/Signup</a>
+                <a class="nav-link" href="#"><i class="fas fa-user"></i> Login/Signup</a>
             </li>
         </ul>
     </div>
 </nav>
-
-<div class="slogan">
-    Open a book, open your mind
-</div>
-
-<div class="search-bar-container">
-    <div class="search-bar">
-        <input type="text" class="form-control" placeholder="Search for books...">
-    </div>
-</div>
-
-<div class="featured-books" style="color: #333; font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif; font-weight: bold; text-transform: uppercase; font-size: 1.5rem; margin-top: 20px; margin-left: 15px;">Featured Books</div>
-<div class="card-container">
-    <div class="card mb-3" data-toggle="modal" data-target="#bookModal" onclick="populateModal('A Fine Balance', 'Rohinton Mistry', 624, 'Novel', 'English')">
-        <img src="images/book1.jpg" class="card-img-top" alt="Book Title 1">
-    </div>
-    <div class="card mb-3" data-toggle="modal" data-target="#bookModal" onclick="populateModal('Mahabharata', 'Vyasa', 3000, 'Ancient-Epic', 'Sanskrit')">
-        <img src="images/book2.jpeg" class="card-img-top" alt="Book Title 2">
-    </div>
-    <div class="card mb-3" data-toggle="modal" data-target="#bookModal" onclick="populateModal('The Lion King', 'Justine Korman', 288, 'Story-book', 'English')">
-        <img src="images/book3.jpg" class="card-img-top" alt="Book Title 3">
-    </div>
-    <div class="card mb-3" data-toggle="modal" data-target="#bookModal" onclick="populateModal('I Am Watching You', 'Teresa Driscoll', 301, 'Thriller-Novel', 'English')">
-        <img src="images/book4.jpg" class="card-img-top" alt="Book Title 4">
-    </div>
-</div>
 
 <footer class="footer py-2 bg-dark" style="font-size: 0.8rem;">
     <div class="container text-center">
@@ -222,51 +195,8 @@
     </div>
 </footer>
 
-<!-- Book Details Modal -->
-<div class="modal fade" id="bookModal" tabindex="-1" role="dialog" aria-labelledby="bookModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="bookModalLabel">Book Details</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p><strong>Title:</strong> <span id="bookTitle"></span></p>
-                <p><strong>Author:</strong> <span id="bookAuthor"></span></p>
-                <p><strong>Number of Pages:</strong> <span id="bookPages"></span></p>
-                <p><strong>Type:</strong> <span id="bookType"></span></p>
-                <p><strong>Language:</strong> <span id="bookLanguage"></span></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 50) {
-                $('.navbar-custom').addClass('scrolled');
-            } else {
-                $('.navbar-custom').removeClass('scrolled');
-            }
-        });
-    });
-
-    function populateModal(title, author, pages, type, language) {
-        $('#bookTitle').text(title);
-        $('#bookAuthor').text(author);
-        $('#bookPages').text(pages);
-        $('#bookType').text(type);
-        $('#bookLanguage').text(language)
-    }
-</script>
 </body>
 </html>

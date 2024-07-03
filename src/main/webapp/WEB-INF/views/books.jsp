@@ -48,7 +48,7 @@
 </head>
     
 <body>
-	<jsp:include page="index.jsp" />
+	<jsp:include page="layout.jsp" />
     <div class="container">
         <h1 class="mb-4">Book List</h1>
         <table class="table table-custom">
